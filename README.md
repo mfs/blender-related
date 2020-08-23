@@ -6,6 +6,12 @@
 you to cycle between vertex, edge and face modes. The number keys are awkward to get to one handed
 on my keyboard so have this bound to a couple of spare mouse thumb buttons.
 
+## Planck Text Labels
+
+For my Planck render I needed a way of making the keycap labels. I considered using ImageMagick
+directly however decided on using a Python library called Wand which provides a nicer interface
+to ImageMagick. The script is located [here](https://github.com/mfs/blender-related/tree/master/keyboard-labels).
+
 ## Random CLI commands
 
 I use Blender on Linux and prefer to render all output to PNG files. To convert

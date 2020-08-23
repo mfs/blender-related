@@ -1,0 +1,34 @@
+#!/usr/bin/env python
+
+from wand.image import Image
+from wand.drawing import Drawing
+from wand.color import Color
+
+COUNT_X = 12
+COUNT_Y = 4
+SIZE = 400
+WIDTH = SIZE * (COUNT_X + 1)
+HEIGHT =SIZE * (COUNT_Y + 1)
+
+KEYS = [
+    'DRAG Q W E R T Y U I O P PRESS'.split(),
+    'ABORT A S D F G H J K L : "'.split(),
+    'TEMP Z X C V B N M < > ? ENTER'.split(),
+    'MAL CODE META HYPER LOWER ATMOS GYRO RAISE LEFT DOWN UP RIGHT'.split()
+]
+
+def text(draw, x, y, s):
+    if len(s) > 1:
+        draw.font_size = 80
+    else:
+        draw.font_size = 180
+    draw.text(x, y, s)
+
+with Drawing() as draw:
+    draw.font = '/usr/share/fonts/TTF/DejaVuSans.ttf'
+    for y, line in enumerate(KEYS):
+        for x, s in enumerate(line):
+            text(draw, (x + 1) * SIZE, (y + 1) * SIZE, s)
+    with Image(width=WIDTH, height=HEIGHT, background=Color('white')) as img:
+        draw.draw(img)
+        img.save(filename='wand.png')
