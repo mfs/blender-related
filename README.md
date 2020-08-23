@@ -8,6 +8,8 @@ on my keyboard so have this bound to a couple of spare mouse thumb buttons.
 
 ## Planck Text Labels
 
+![Planck render](/images/planck-20.jpg)
+
 For my Planck render I needed a way of making the keycap labels. I considered using ImageMagick
 directly however decided on using a Python library called Wand which provides a nicer interface
 to ImageMagick. The script is located [here](https://github.com/mfs/blender-related/tree/master/keyboard_labels).
