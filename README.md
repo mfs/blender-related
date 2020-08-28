@@ -6,6 +6,13 @@
 you to cycle between vertex, edge and face modes. The number keys are awkward to get to one handed
 on my keyboard so have this bound to a couple of spare mouse thumb buttons.
 
+## Packages
+
+Useful packages to install if not present already:
+
+- imagemagick
+- ffmpeg
+
 ## Planck Text Labels
 
 ![Planck render](/images/planck-20.jpg)
@@ -22,3 +29,7 @@ to animated GIF or video I use `convert` or `ffmpeg`.
 Convert a sequence of PNGs to an mp4 suitable for upload to Twitter.
 
     ffmpeg -f image2 -i %04d.png -vcodec libx264 -pix_fmt yuv420p -strict 2 video.mp4
+
+Convert a PNG to JPG with default quality setting of 92 (Twitter heavily resamples PNG)
+
+    convert image.png image.jpg
