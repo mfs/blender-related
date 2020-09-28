@@ -33,3 +33,9 @@ Convert a sequence of PNGs to an mp4 suitable for upload to Twitter.
 Convert a PNG to JPG with default quality setting of 92 (Twitter heavily resamples PNG)
 
     convert image.png image.jpg
+
+When creating animations I render as few frames as possible though sometimes want to duplicate
+the last frame to lengthen the 'pause' in the animation. For example given a 20 frame animation
+to duplicate the last frame 20 times by creating symlinks:
+
+    for i in $(seq -w 0021 0060); do ln -s frame_0020.png frame_$i.png; done
