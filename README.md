@@ -6,6 +6,12 @@
 you to cycle between vertex, edge and face modes. The number keys are awkward to get to one handed
 on my keyboard so have this bound to a couple of spare mouse thumb buttons.
 
+## Quick Smooth Plugin
+
+[quick_smooth](https://github.com/mfs/blender-related/tree/master/quick_smooth) enables Auto Smooth
+with a 30 degree angle and enables smooth shading in one action. I bind it to a spare mouse button
+so newly created objects can be smooth shaded immediately after creation.
+
 ## Packages
 
 Useful packages to install if not present already:
